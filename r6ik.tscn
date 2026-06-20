@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://clukkxnk7aieo"]
+
+[ext_resource type="PackedScene" uid="uid://yovprvgfimc2" path="res://r6nocomplex.glb" id="1_mxfqs"]
+
+[node name="r6nocomplex" unique_id=2093972979 instance=ExtResource("1_mxfqs")]

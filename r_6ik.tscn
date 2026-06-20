@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cdr8ikjwfhqun"]
+
+[ext_resource type="PackedScene" uid="uid://xo3s8pedycxf" path="res://R6IK.glb" id="1_blacf"]
+[ext_resource type="Texture2D" uid="uid://carumrrxbpvf4" path="res://icon.svg" id="2_bmtif"]
+[ext_resource type="Texture2D" uid="uid://diyq5vs6uu2im" path="res://roadblocklogo 1by1.png" id="2_eopxj"]
+[ext_resource type="Script" uid="uid://cb6kqkyectu5d" path="res://animation_player.gd" id="2_wq3bo"]
+[ext_resource type="Script" uid="uid://dafmwwpkow345" path="res://itemroot.gd" id="3_xvhbr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8f3l"]
+albedo_texture = ExtResource("2_eopxj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+
+[node name="R6IK" unique_id=21435972 instance=ExtResource("1_blacf")]
+
+[node name="Skeleton3D" parent="__Rig" parent_id_path=PackedInt32Array(1429039736) index="0" unique_id=519535947]
+bones/2/position = Vector3(8.8879425e-08, -1.6940659e-21, 1.0166621)
+bones/2/rotation = Quaternion(-0.0036187505, 0.7085733, 0.7056212, -0.003095626)
+bones/3/position = Vector3(0.999839, 2.2866865e-07, 0.5027894)
+bones/4/position = Vector3(-0.999839, -2.4809174e-07, 0.50278926)
+bones/5/position = Vector3(0.9959046, 0.008013806, -1.0003328)
+bones/5/rotation = Quaternion(-0.69394386, 0.16381802, 0.1610903, 0.68238974)
+bones/5/scale = Vector3(0.99999976, 0.99999905, 1.0004148)
+bones/6/position = Vector3(-0.99590474, 0.0080054635, -1.0003318)
+bones/6/rotation = Quaternion(-0.6939379, -0.1638168, -0.16109139, 0.68239576)
+bones/6/scale = Vector3(0.9999998, 0.9999993, 1.0004143)
+
+[node name="Sprite3D" type="Sprite3D" parent="Head" parent_id_path=PackedInt32Array(951881983) index="0" unique_id=1825099131]
+transform = Transform3D(-0.9646638, 0.018081877, 0.234744, -0.23287092, -0.0015863643, -0.9732537, -0.02388669, -0.7147712, 0.008098461, 0.14015147, -0.61541086, -4.5648837)
+material_override = SubResource("StandardMaterial3D_r8f3l")
+texture = ExtResource("2_bmtif")
+
+[node name="itemroot" type="Node3D" parent="Left Arm" parent_id_path=PackedInt32Array(968312325) index="0" unique_id=706327171]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 1.4210855e-14, 0, -1.4210855e-14, 0.9999998, -1.4869068, -2.407988e-07, -2.0199666)
+script = ExtResource("3_xvhbr")
+
+[node name="mesh" type="MeshInstance3D" parent="Left Arm/itemroot" index="0" unique_id=1229416734]
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="AnimationPlayer" parent="." index="11" unique_id=514920901]
+script = ExtResource("2_wq3bo")
