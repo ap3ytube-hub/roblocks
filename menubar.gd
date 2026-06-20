@@ -11,7 +11,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("sendmessage"):
+		if !textbox.text == "":
+			chathistory.text += Global.playername + " : " + textbox.text + "\n"
+			chat_bubble.show_message(textbox.text)
+			textbox.text = ""  # clear the input box after sending
 
 
 func _on_chat_pressed() -> void:
@@ -22,6 +26,7 @@ func _on_chat_pressed() -> void:
 
 
 func _on_send_pressed() -> void:
-	chathistory.text += Global.playername + " : " + textbox.text + "\n"
-	chat_bubble.show_message(textbox.text)
-	textbox.text = ""  # clear the input box after sending
+	if !textbox.text == "":
+		chathistory.text += Global.playername + " : " + textbox.text + "\n"
+		chat_bubble.show_message(textbox.text)
+		textbox.text = ""  # clear the input box after sending

@@ -32,6 +32,8 @@ script = ExtResource("3_i3pqv")
 [node name="Camera3D" type="Camera3D" parent="pivot/SpringArm3D" unique_id=333973290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.867778)
 
+[node name="AudioListener3D" type="AudioListener3D" parent="pivot" unique_id=355236660]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=861980575]
 
 [node name="shiftlockcursor" type="Sprite2D" parent="CanvasLayer" unique_id=573697686]

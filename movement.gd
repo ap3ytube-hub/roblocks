@@ -51,3 +51,15 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_truss_body_entered(body: Node3D) -> void:
+	print("SIGNAL FIRED, body is: ", body.name)
+	if body.is_in_group("player"):
+		Global.climbing = true
+		print("started climbing")
+
+func _on_truss_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		Global.climbing = false
+		print("stopped climbing")
