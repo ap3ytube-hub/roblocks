@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://diyq5vs6uu2im"
 path.s3tc="res://.godot/imported/roadblocklogo 1by1.png-4d5088a464f41500c11d1c65ea1e92cb.s3tc.ctex"
+path.etc2="res://.godot/imported/roadblocklogo 1by1.png-4d5088a464f41500c11d1c65ea1e92cb.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://roadblocklogo 1by1.png"
-dest_files=["res://.godot/imported/roadblocklogo 1by1.png-4d5088a464f41500c11d1c65ea1e92cb.s3tc.ctex"]
+dest_files=["res://.godot/imported/roadblocklogo 1by1.png-4d5088a464f41500c11d1c65ea1e92cb.s3tc.ctex", "res://.godot/imported/roadblocklogo 1by1.png-4d5088a464f41500c11d1c65ea1e92cb.etc2.ctex"]
 
 [params]
 
