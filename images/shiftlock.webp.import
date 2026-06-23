@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpmnh871jlqhp"
-path="res://.godot/imported/ArrowCursor.png-114be92f19ea7e9203dadc2a16b62825.ctex"
+uid="uid://bb4jxyjngoal8"
+path="res://.godot/imported/shiftlock.webp-ae413acce891e06d30424203ebaf1d3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArrowCursor.png"
-dest_files=["res://.godot/imported/ArrowCursor.png-114be92f19ea7e9203dadc2a16b62825.ctex"]
+source_file="res://images/shiftlock.webp"
+dest_files=["res://.godot/imported/shiftlock.webp-ae413acce891e06d30424203ebaf1d3a.ctex"]
 
 [params]
 

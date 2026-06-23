@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://1m6a3c11yaq3"]
 
-[ext_resource type="Script" uid="uid://bf0i67ibmmqye" path="res://movement.gd" id="1_onrkg"]
-[ext_resource type="Script" uid="uid://c3swidhkbankv" path="res://pivot.gd" id="3_hqtel"]
-[ext_resource type="Script" uid="uid://duiaoy8gwbqbb" path="res://spring_arm_3d.gd" id="3_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://bb4jxyjngoal8" path="res://shiftlock.webp" id="5_sweqy"]
-[ext_resource type="PackedScene" uid="uid://dj0jwsrjahxbc" path="res://ther6rig.glb" id="6_1jxqw"]
-[ext_resource type="Script" uid="uid://ckhpbckmvwfpl" path="res://shiftlockcursor.gd" id="6_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://diyq5vs6uu2im" path="res://roadblocklogo 1by1.png" id="6_dw050"]
-[ext_resource type="Script" uid="uid://ckmx4jr6mjbxp" path="res://menubar.gd" id="6_n7ghd"]
-[ext_resource type="Texture2D" uid="uid://carumrrxbpvf4" path="res://icon.svg" id="7_dw050"]
-[ext_resource type="Script" uid="uid://cs320ub74njr8" path="res://chatbar.gd" id="8_b26j0"]
-[ext_resource type="Script" uid="uid://vgmclu5sycxr" path="res://chattext.gd" id="11_nvl01"]
+[ext_resource type="Script" uid="uid://bf0i67ibmmqye" path="res://scripts/movement.gd" id="1_tsrwb"]
+[ext_resource type="Script" uid="uid://c3swidhkbankv" path="res://scripts/pivot.gd" id="2_t1cxs"]
+[ext_resource type="Script" uid="uid://duiaoy8gwbqbb" path="res://scripts/spring_arm_3d.gd" id="3_2rxho"]
+[ext_resource type="Texture2D" uid="uid://bb4jxyjngoal8" path="res://images/shiftlock.webp" id="4_cbyhw"]
+[ext_resource type="Script" uid="uid://ckhpbckmvwfpl" path="res://scripts/shiftlockcursor.gd" id="5_hpxkm"]
+[ext_resource type="Script" uid="uid://ckmx4jr6mjbxp" path="res://scripts/menubar.gd" id="6_wemna"]
+[ext_resource type="Texture2D" uid="uid://diyq5vs6uu2im" path="res://images/roadblocklogo 1by1.png" id="7_r66y1"]
+[ext_resource type="Texture2D" uid="uid://carumrrxbpvf4" path="res://images/icon.svg" id="8_k0k4f"]
+[ext_resource type="Script" uid="uid://cs320ub74njr8" path="res://scripts/chatbar.gd" id="9_hru13"]
+[ext_resource type="Script" uid="uid://dfm21sbltne8f" path="res://scripts/yourname.gd" id="10_opiut"]
+[ext_resource type="PackedScene" uid="uid://dj0jwsrjahxbc" path="res://tscns/ther6rig.glb" id="11_d6h0n"]
+[ext_resource type="Script" uid="uid://vgmclu5sycxr" path="res://scripts/chattext.gd" id="12_f37yy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
 size = Vector3(2.040039, 2.0913086, 1)
@@ -19,15 +20,15 @@ size = Vector3(2.040039, 2.0913086, 1)
 size = Vector3(2.0175781, 2.078125, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1321339235]
-script = ExtResource("1_onrkg")
+script = ExtResource("1_tsrwb")
 
 [node name="pivot" type="Node3D" parent="." unique_id=854751272]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 0)
-script = ExtResource("3_hqtel")
+script = ExtResource("2_t1cxs")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="pivot" unique_id=88084937]
 spring_length = 10.0
-script = ExtResource("3_i3pqv")
+script = ExtResource("3_2rxho")
 
 [node name="Camera3D" type="Camera3D" parent="pivot/SpringArm3D" unique_id=333973290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.867778)
@@ -39,14 +40,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.867778)
 [node name="shiftlockcursor" type="Sprite2D" parent="CanvasLayer" unique_id=573697686]
 position = Vector2(960, 493.00006)
 scale = Vector2(0.085714385, 0.085714385)
-texture = ExtResource("5_sweqy")
-script = ExtResource("6_2hs0m")
+texture = ExtResource("4_cbyhw")
+script = ExtResource("5_hpxkm")
 
 [node name="menubar" type="ColorRect" parent="CanvasLayer" unique_id=1752238117]
 offset_right = 4378.0
 offset_bottom = 64.0
 color = Color(0, 0, 0, 0.30588236)
-script = ExtResource("6_n7ghd")
+script = ExtResource("6_wemna")
 
 [node name="menu" type="Button" parent="CanvasLayer/menubar" unique_id=464181722]
 layout_mode = 0
@@ -56,7 +57,7 @@ offset_right = 1267.0
 offset_bottom = 1267.0
 scale = Vector2(0.04293842, 0.04293842)
 focus_mode = 0
-icon = ExtResource("6_dw050")
+icon = ExtResource("7_r66y1")
 
 [node name="chat" type="Button" parent="CanvasLayer/menubar" unique_id=180396023]
 layout_mode = 0
@@ -66,10 +67,10 @@ offset_right = 198.0
 offset_bottom = 141.0
 scale = Vector2(0.39581802, 0.39581802)
 focus_mode = 0
-icon = ExtResource("7_dw050")
+icon = ExtResource("8_k0k4f")
 
 [node name="chatbar" type="Node2D" parent="CanvasLayer/menubar" unique_id=247956955]
-script = ExtResource("8_b26j0")
+script = ExtResource("9_hru13")
 
 [node name="bg" type="ColorRect" parent="CanvasLayer/menubar/chatbar" unique_id=1162352346]
 offset_left = 5.0
@@ -94,7 +95,7 @@ offset_right = 844.0
 offset_bottom = 137.0
 scale = Vector2(0.23592205, 0.23592205)
 focus_mode = 3
-icon = ExtResource("7_dw050")
+icon = ExtResource("8_k0k4f")
 
 [node name="chatlistory" type="Label" parent="CanvasLayer/menubar/chatbar" unique_id=1949396363]
 offset_left = 8.0
@@ -102,6 +103,44 @@ offset_top = 78.0
 offset_right = 743.0
 offset_bottom = 476.0
 text = "texthere"
+
+[node name="leaderboard" type="Node2D" parent="CanvasLayer" unique_id=1202244480]
+position = Vector2(1526, 73)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/leaderboard" unique_id=1239545627]
+offset_right = 381.0
+offset_bottom = 588.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="yourname" type="Label" parent="CanvasLayer/leaderboard/ColorRect" unique_id=2077590486]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 111.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 38
+text = "[playername]"
+script = ExtResource("10_opiut")
+
+[node name="Line2D" type="Line2D" parent="CanvasLayer/leaderboard/ColorRect" unique_id=370719942]
+position = Vector2(-3, 2)
+points = PackedVector2Array(7, 71, 375, 71)
+width = 5.85
+
+[node name="Label" type="Label" parent="CanvasLayer/leaderboard/ColorRect" unique_id=1665561111]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 85.0
+offset_right = 118.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0.70380783, 0.70380783, 0.70380783, 1)
+theme_override_font_sizes/font_size = 37
+text = "[otherperson]
+[otherperson]
+[otherperson]
+[otherperson]
+[otherperson]
+"
 
 [node name="legs" type="CollisionShape3D" parent="." unique_id=161932825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0297852, 0)
@@ -111,7 +150,7 @@ shape = SubResource("BoxShape3D_yf5fn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9688478, 0)
 shape = SubResource("BoxShape3D_57qmd")
 
-[node name="ther6rig" parent="." unique_id=373579478 instance=ExtResource("6_1jxqw")]
+[node name="ther6rig" parent="." unique_id=373579478 instance=ExtResource("11_d6h0n")]
 
 [node name="name" type="Label3D" parent="ther6rig" unique_id=168151099]
 transform = Transform3D(2.099788, 0, 0, 0, 2.0641093, 0, 0, 0, 0.013932109, 0, 5.3855643, 0)
@@ -123,9 +162,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.878608, 0)
 
 [node name="chattext" type="Label3D" parent="ther6rig/chat" unique_id=303889868]
 transform = Transform3D(2.4992313, 0, 0, 0, 2.4992313, 0, 0, 0, 1, 0, 0, 0)
+layers = 3
 billboard = 1
 text = "[chat-text-here]"
-script = ExtResource("11_nvl01")
+script = ExtResource("12_f37yy")
 
 [connection signal="pressed" from="CanvasLayer/menubar/chat" to="CanvasLayer/menubar" method="_on_chat_pressed"]
 [connection signal="pressed" from="CanvasLayer/menubar/chatbar/textbox/send" to="CanvasLayer/menubar" method="_on_send_pressed"]

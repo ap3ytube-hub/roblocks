@@ -1,11 +1,19 @@
 extends CharacterBody3D
 
 const SPEED = 13.0
-const JUMP_VELOCITY = 20.0
+const JUMP_VELOCITY = 22.5
 
 var sens : float = 1.0
+var health : int = 100
 
 @onready var pivot = $pivot
+
+func _process(delta: float) -> void:
+	if health == 0:
+		self.position.x = 0
+		self.position.z = 0
+		self.position.y = 4.109
+		health = 100
 
 func _input(event):
 	if event is InputEventMouseMotion and (Input.is_action_pressed("rightclick") or Global.shift_lock):
@@ -26,9 +34,9 @@ func _physics_process(delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 	if not is_on_floor() and Global.climbing == false:
-		velocity += get_gravity() * delta * 7
+		velocity += get_gravity() * delta * 8.5
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	var input_dir := Input.get_vector(
@@ -53,13 +61,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_truss_body_entered(body: Node3D) -> void:
-	print("SIGNAL FIRED, body is: ", body.name)
-	if body.is_in_group("player"):
+
+func _on_trussarea_body_entered(body: Node3D) -> void:
+	if body.is_in_group("playertscn"):
 		Global.climbing = true
 		print("started climbing")
 
-func _on_truss_body_exited(body: Node3D) -> void:
-	if body.is_in_group("player"):
+
+func _on_trussarea_body_exited(body: Node3D) -> void:
+	if body.is_in_group("playertscn"):
 		Global.climbing = false
 		print("stopped climbing")

@@ -2,18 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjip1ncda4anu"
-path.s3tc="res://.godot/imported/rblxstud.png-5b47bc308d0a0818307ab19e5e01298c.s3tc.ctex"
-path.etc2="res://.godot/imported/rblxstud.png-5b47bc308d0a0818307ab19e5e01298c.etc2.ctex"
+uid="uid://dq0vs5d68nlvr"
+path.s3tc="res://.godot/imported/R6IK_Image.png-021e042ea9efaf12cb2b817d99163302.s3tc.ctex"
+path.etc2="res://.godot/imported/R6IK_Image.png-021e042ea9efaf12cb2b817d99163302.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8597d4e7e65352a302b63e07bc01a7da"
+}
 
 [deps]
 
-source_file="res://rblxstud.png"
-dest_files=["res://.godot/imported/rblxstud.png-5b47bc308d0a0818307ab19e5e01298c.s3tc.ctex", "res://.godot/imported/rblxstud.png-5b47bc308d0a0818307ab19e5e01298c.etc2.ctex"]
+source_file="res://tscns/R6IK_Image.png"
+dest_files=["res://.godot/imported/R6IK_Image.png-021e042ea9efaf12cb2b817d99163302.s3tc.ctex", "res://.godot/imported/R6IK_Image.png-021e042ea9efaf12cb2b817d99163302.etc2.ctex"]
 
 [params]
 

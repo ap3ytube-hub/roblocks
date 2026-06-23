@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cdr8ikjwfhqun"]
 
-[ext_resource type="PackedScene" uid="uid://xo3s8pedycxf" path="res://R6IK.glb" id="1_blacf"]
-[ext_resource type="Texture2D" uid="uid://carumrrxbpvf4" path="res://icon.svg" id="2_bmtif"]
-[ext_resource type="Texture2D" uid="uid://diyq5vs6uu2im" path="res://roadblocklogo 1by1.png" id="2_eopxj"]
-[ext_resource type="Script" uid="uid://cb6kqkyectu5d" path="res://animation_player.gd" id="2_wq3bo"]
-[ext_resource type="Script" uid="uid://dafmwwpkow345" path="res://itemroot.gd" id="3_xvhbr"]
+[ext_resource type="PackedScene" uid="uid://xo3s8pedycxf" path="res://tscns/R6IK.glb" id="1_blacf"]
+[ext_resource type="Texture2D" uid="uid://carumrrxbpvf4" path="res://images/icon.svg" id="2_bmtif"]
+[ext_resource type="Texture2D" uid="uid://diyq5vs6uu2im" path="res://images/roadblocklogo 1by1.png" id="2_eopxj"]
+[ext_resource type="Script" uid="uid://cb6kqkyectu5d" path="res://scripts/animation_player.gd" id="2_wq3bo"]
+[ext_resource type="Script" uid="uid://dafmwwpkow345" path="res://scripts/itemroot.gd" id="3_xvhbr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8f3l"]
 albedo_texture = ExtResource("2_eopxj")
