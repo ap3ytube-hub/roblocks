@@ -7,13 +7,13 @@ var sens : float = 1.0
 var health : int = 100
 
 @onready var pivot = $pivot
+@onready var roblox_death: AudioStreamPlayer = $sound/RobloxDeath
+@onready var model: Node3D = $ther6rig
+
 
 func _process(delta: float) -> void:
 	if health == 0:
-		self.position.x = 0
-		self.position.z = 0
-		self.position.y = 4.109
-		health = 100
+		oof()
 
 func _input(event):
 	if event is InputEventMouseMotion and (Input.is_action_pressed("rightclick") or Global.shift_lock):
@@ -72,3 +72,14 @@ func _on_trussarea_body_exited(body: Node3D) -> void:
 	if body.is_in_group("playertscn"):
 		Global.climbing = false
 		print("stopped climbing")
+
+func oof():
+	roblox_death.play()
+	model.visible = false
+	velocity.y = 1
+	await get_tree().create_timer(2).timeout
+	model.visible = true
+	self.position.x = 0
+	self.position.z = 0
+	self.position.y = 4.109
+	health = 100
